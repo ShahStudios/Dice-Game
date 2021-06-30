@@ -64,15 +64,7 @@ button {
     font-weight: bold;
 }
 
-#rollBtn {
-    background-color: var(--color-3);
-}
-
-#rollBtn2x {
-    background-color: var(--color-3);
-}
-
-#resetBtn {
+#startBtn, #rollBtn, #rollBtn2x, #resetBtn {
     background-color: var(--color-3);
 }
 
@@ -81,6 +73,10 @@ button:focus {
 }
 
 #resetBtn {
+    display: none;
+}
+
+#rollBtn, #rollBtn2x {
     display: none;
 }
 

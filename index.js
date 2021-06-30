@@ -6,6 +6,8 @@ const message = document.getElementById("message")
 const rollBtn = document.getElementById("rollBtn")
 const rollBtn2x = document.getElementById("rollBtn2x")
 const resetBtn = document.getElementById("resetBtn")
+const startBtn = document.getElementById("startBtn")
+
 let player1Score = 0
 let player2Score = 0
 let player1Turn = true
@@ -14,6 +16,12 @@ function showResetButton() {
     rollBtn.style.display = "none"
     rollBtn2x.style.display = "none"
     resetBtn.style.display = "block"
+}
+
+function displayDice() {
+    startBtn.style.display = "none"
+    rollBtn.style.display = "block"
+    rollBtn2x.style.display = "block"
 }
 
 function reset() {
@@ -53,7 +61,7 @@ function diceLogic(multiplier) {
         }
     } else if (multiplier === 2) {
         if (player1Turn) {
-            console.log(randomNumber)
+            // console.log(randomNumber)
             player1Score += doubleDraw
             player1Scoreboard.textContent = player1Score
             player1Dice.textContent = randomNumber
@@ -61,7 +69,7 @@ function diceLogic(multiplier) {
             player2Dice.classList.add("active")
             message.textContent = "Player 2 Turn"
         } else {
-            console.log(randomNumber)
+            // console.log(randomNumber)
             player2Score += doubleDraw
             player2Scoreboard.textContent = player2Score
             player2Dice.textContent = randomNumber
@@ -100,6 +108,9 @@ function diceRoll2x() {
     displayMessage()
 }
 
+startBtn.addEventListener("click", function () {
+    displayDice()
+})
 rollBtn.addEventListener("click", function () {
     diceRoll()
 })
