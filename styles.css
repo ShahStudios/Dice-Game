@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-    width: 400px;
+    width: 500px;
     text-align: center;
     margin: 0 auto;
     background-color: #f8f8ff;
@@ -46,12 +46,18 @@ body {
     font-weight: bold;
 }
 
+.sample-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
 
 button {
     color: #fff;
     padding: 20px 30px;
     font-size: 20px;
-    margin: 40px auto;
+    margin: 50px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -59,6 +65,10 @@ button {
 }
 
 #rollBtn {
+    background-color: var(--color-3);
+}
+
+#rollBtn2x {
     background-color: var(--color-3);
 }
 
