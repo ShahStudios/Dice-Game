@@ -77,8 +77,10 @@ function diceLogic(multiplier) {
 function displayMessage() {
     if (player1Score >= 21) {
         message.textContent = "Player 1 hit 21, and lost 😢"
+        showResetButton()
     } else if (player2Score >= 21) {
         message.textContent = "Player 2 hit 21, and lost 😞"
+        showResetButton()
     } else if (player1Score >= 20) {
         message.textContent = "Player 1 Won 🥳"
         showResetButton()
