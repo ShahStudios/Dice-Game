@@ -22,6 +22,7 @@ function displayDice() {
     startBtn.style.display = "none"
     rollBtn.style.display = "block"
     rollBtn2x.style.display = "block"
+    message.style.display = "block"
 }
 
 function reset() {
